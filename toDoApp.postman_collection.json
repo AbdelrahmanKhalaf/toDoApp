@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "9539ced2-1fb0-4841-b722-5e5a43ddacf6",
+		"name": "toDoApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24041902",
+		"_collection_link": "https://winter-robot-532831.postman.co/workspace/Sari-Env~35378cc6-d0ad-4141-82ed-2710504912db/collection/24041902-9539ced2-1fb0-4841-b722-5e5a43ddacf6?action=share&creator=24041902&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "toDo",
+			"item": [
+				{
+					"name": "Add new to do for specific user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFlNjdkZmVmZWZlMmNkNDRjNmZmYiIsImlhdCI6MTY4Nzg3MzI2NX0.u3vZN5ui3GiMZDfnllwPdBXGyMFyObLbzqlNFn3wjaQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"body\",\"des\":\"everyting\",\"userId\":\"6444a4a5fcdbde42b0d4ffb2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/toDo/api/v1/todo/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an existing to do for specific user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFlNjdkZmVmZWZlMmNkNDRjNmZmYiIsImlhdCI6MTY4Nzg3MzI2NX0.u3vZN5ui3GiMZDfnllwPdBXGyMFyObLbzqlNFn3wjaQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"body\",\"des\":\"everyting\",\"userId\":\"6444a4a5fcdbde42b0d4ffb2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/toDo/api/v1/todo/:userId/:todoId",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"toDo",
+								"api",
+								"v1",
+								"todo",
+								":userId",
+								":todoId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								},
+								{
+									"key": "todoId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an existing to do for specific user.",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFlNjdkZmVmZWZlMmNkNDRjNmZmYiIsImlhdCI6MTY4Nzg3MzI2NX0.u3vZN5ui3GiMZDfnllwPdBXGyMFyObLbzqlNFn3wjaQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"body\",\"des\":\"everyting\",\"userId\":\"6444a4a5fcdbde42b0d4ffb2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/toDo/api/v1/todo/:userId/:todoId",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"toDo",
+								"api",
+								"v1",
+								"todo",
+								":userId",
+								":todoId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								},
+								{
+									"key": "todoId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all to do for specific user.",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFlNjdkZmVmZWZlMmNkNDRjNmZmYiIsImlhdCI6MTY4Nzg3MzI2NX0.u3vZN5ui3GiMZDfnllwPdBXGyMFyObLbzqlNFn3wjaQ",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/toDo/api/v1/todo/6439968636bd5544b4adde8e"
+					},
+					"response": []
+				},
+				{
+					"name": "Get to do information for specific user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWFlNjdkZmVmZWZlMmNkNDRjNmZmYiIsImlhdCI6MTY4Nzg3MzI2NX0.u3vZN5ui3GiMZDfnllwPdBXGyMFyObLbzqlNFn3wjaQ",
+								"type": "text"
+							}
+						],
+						"url": "http://127.0.0.1:8080/toDo/api/v1/todo/6439968636bd5544b4adde8e/649aee6faf2a170fc4042836"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Register ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"abdo2@gmail.com\",\"password\":\"123123123\",\"phone\":\"1104581496\",\"name\":\"abdo khhalaf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/toDo/api/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"abdo2@gmail.com\",\"password\":\"123123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8080/toDo/api/v1/auth/login"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
