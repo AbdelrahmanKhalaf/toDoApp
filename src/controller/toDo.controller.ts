@@ -70,19 +70,3 @@ export const getToDoForUser = async (req: Request, res: Response, next: NextFunc
         next(err)
     }
 }
-//@DESC Get all to do for specific user.
-//@ROUTE GET /toDo/api/v1/todo/:userId/
-//@ACCESS: Private(admin)
-export const getAllToDoForUser = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-        const { userId } = req.params
-        const todos = await ToDo.find({ userId: userId })
-        return res.send({
-            message: "The todos for this specific user have been fached",
-            success: true,
-            data: todos
-        })
-    } catch (err) {
-        next(err)
-    }
-}
